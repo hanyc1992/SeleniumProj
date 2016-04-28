@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Selenium Project]">
+  <parameter name="GoogleParams" value="/googleConfigs.xml"/>
+  <parameter name="LinkedInParams" value="/linkedInConfigs.xml"/>
+  <test name="Test Google(failed)">
+    <classes>
+      <class name="edu.utexas.ece.testCases.TestGoogle">
+        <methods>
+          <include name="destory"/>
+          <include name="init"/>
+          <include name="testLinkedInLogin" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- edu.utexas.ece.testCases.TestGoogle -->
+    </classes>
+  </test> <!-- Test Google(failed) -->
+</suite> <!-- Failed suite [Selenium Project] -->

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fvt_element>
+    <!-- Login Params-->
+    <arg id="userName">
+        <value>hanyc1992</value>
+    </arg>
+
+    <arg id="password">
+        <value>12345678</value>
+    </arg>
+</fvt_element>
