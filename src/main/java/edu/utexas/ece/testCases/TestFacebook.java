@@ -14,10 +14,10 @@ import org.testng.annotations.Test;
 import java.util.Map;
 
 /**
- * Created by hanyc on 4/26/2016.
+ * Created by hanyc on 4/27/2016.
  */
-public class TestGoogle {
-    static private String BASE_URL = "http://www.google.com";
+public class TestFacebook {
+    static private String BASE_URL = "http://www.facebook.com";
 
     private TestTasks testTasks;
     private SeleniumUtils utils;
@@ -32,18 +32,27 @@ public class TestGoogle {
     }
 
     @Test
-    @Parameters({"googleParams", "googleXPath"})
-    public void testGoogleSearch(String paramsFileName, final String xPathFileName) {
+    @Parameters({"facebookParams", "facebookXPath"})
+    public void testFacebookLogin(String paramsFileName, final String xPathFileName) {
         final Map<String, String> paramsMap = XMLParser.getInstance().getMap(paramsFileName);
         final Map<String, String> xPathMap = XMLParser.getInstance().getMap(xPathFileName);
         System.out.println("the paramsMap is " + paramsMap);
         System.out.println("the xPathMap is " + xPathMap);
 
         testTasks.openSite();
-        testTasks.typeSearchTxtField(xPathMap.get("googleSearchTxtField"), paramsMap.get("googleSearchTxtField"));
-        testTasks.clickSearchBtn(xPathMap.get("googleSearchBtn"));
-        testTasks.verifyResult(paramsMap.get("verify-String"));
+        testTasks.deleteAllCookies();
+        testTasks.typeSearchTxtField(xPathMap.get("loginUserName"), paramsMap.get("userNameA"));
+        testTasks.typeSearchTxtField(xPathMap.get("loginUserPassword"), paramsMap.get("passwordA"));
+        testTasks.clickSearchBtn(xPathMap.get("loginClkBtn"));
+        testTasks.verifyResult(paramsMap.get("verifyStringAfterLogin"));
         utils.pause(1000);
+    }
+
+    private void deleteAllCookies() {
+        if (webDriver == null) {
+            return;
+        }
+
     }
 
 

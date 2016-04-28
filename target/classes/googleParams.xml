@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fvt_element>
-    <!-- Search String-->
     <arg id="googleSearchTxtField">
         <value>utexas</value>
     </arg>
 
     <arg id="verify-String">
-        <value>University of Texas at Austin</value>
+        <value>The University of Texas at Austin</value>
     </arg>
 </fvt_element>

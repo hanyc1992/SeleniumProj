@@ -1,5 +1,7 @@
 package edu.utexas.ece.utils;
 
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -7,6 +9,7 @@ import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.*;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 /**
@@ -66,6 +69,17 @@ public class XMLParser {
      */
     public Map<String, Object> parserXmlByPath(String xmlPath) {
         return parserXml(xmlPath);
+    }
+
+    public Map<String, String> getMap(String xmlFile) {
+        final Map<String, String> result = new HashMap<String, String>();
+        Map<String, Object> temp = parserXml(xmlFile);
+        Iterator it = temp.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            result.put((String) pair.getKey(), ((String)pair.getValue()).replace(')',']'));
+        }
+        return result;
     }
 }
 

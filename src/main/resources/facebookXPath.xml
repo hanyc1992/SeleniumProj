@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fvt_element>
+    <arg id="loginUserName">
+        <value>//input[@type='email')</value>
+    </arg>
+
+    <arg id="loginUserPassword">
+        <value>//input[@type='password')</value>
+    </arg>
+
+    <arg id="loginClkBtn">
+        <value>//input[@type='submit')</value>
+    </arg>
+</fvt_element>

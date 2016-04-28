@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fvt_element>
+    <arg id="userNameA">
+        <value>userNameA</value>
+    </arg>
+
+    <arg id="passwordA">
+        <value>passwordA</value>
+    </arg>
+
+    <arg id="verifyStringAfterLogin">
+        <value>Find friends</value>
+    </arg>
+</fvt_element>

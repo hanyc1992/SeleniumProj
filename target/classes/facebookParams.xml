@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fvt_element>
+    <arg id="userNameA">
+        <value>hanyc1992@gmail.com</value>
+    </arg>
+
+    <arg id="passwordA">
+        <value>hyc87221872</value>
+    </arg>
+
+    <arg id="verifyStringAfterLogin">
+        <value>Find friends</value>
+    </arg>
+</fvt_element>

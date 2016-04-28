@@ -1,12 +1,8 @@
 package edu.utexas.ece;
 
+import edu.utexas.ece.testCases.TestFacebook;
 import edu.utexas.ece.testCases.TestGoogle;
-import edu.utexas.ece.testCases.TestLinkedIn;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.TestNG;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.xml.XmlClass;
 import org.testng.xml.XmlSuite;
 import org.testng.xml.XmlTest;
@@ -26,24 +22,26 @@ public class SeleniumMain {
         suite.setName("Selenium Project");
 
         Map<String, String> suiteParamsMap = new HashMap<String, String>();
-        suiteParamsMap.put("LinkedInParams", "/linkedInConfigs.xml");
-        suiteParamsMap.put("GoogleParams", "/googleConfigs.xml");
+        suiteParamsMap.put("googleParams", "/googleParams.xml");
+        suiteParamsMap.put("googleXPath", "/googleXPath.xml");
+        suiteParamsMap.put("facebookParams", "/facebookParams.xml");
+        suiteParamsMap.put("facebookXPath", "/facebookXPath.xml");
 
         suite.setParameters(suiteParamsMap);
 
-//        //Test LinkedIn
-//        XmlTest testLinkedIn = new XmlTest(suite);
-//        testLinkedIn.setName("Test LinkedIn");
-//        List<XmlClass> linkedInClasses = new ArrayList<XmlClass>();
-//        linkedInClasses.add(new XmlClass(TestLinkedIn.class));
-//        testLinkedIn.setXmlClasses(linkedInClasses);
+//        //Test Google Search
+//        XmlTest testGoogle = new XmlTest(suite);
+//        testGoogle.setName("Test Google");
+//        List<XmlClass> googleClasses = new ArrayList<XmlClass>();
+//        googleClasses.add(new XmlClass(TestGoogle.class));
+//        testGoogle.setXmlClasses(googleClasses);
 
-        //Test Google Search
-        XmlTest testGoogle = new XmlTest(suite);
-        testGoogle.setName("Test Google");
-        List<XmlClass> googleClasses = new ArrayList<XmlClass>();
-        googleClasses.add(new XmlClass(TestGoogle.class));
-        testGoogle.setXmlClasses(googleClasses);
+//        Test Facebook
+        XmlTest testFacebook = new XmlTest(suite);
+        testFacebook.setName("Test Facebook");
+        List<XmlClass> facebookClasses = new ArrayList<XmlClass>();
+        facebookClasses.add(new XmlClass(TestFacebook.class));
+        testFacebook.setXmlClasses(facebookClasses);
 
         //running tests
         List<XmlSuite> suites = new ArrayList<XmlSuite>();

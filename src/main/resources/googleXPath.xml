@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fvt_element>
+    <arg id="googleSearchTxtField">
+        <value>//input[@name='q')</value>
+    </arg>
+
+    <arg id="googleSearchBtn">
+        <value>//input[@name='btnK')</value>
+    </arg>
+</fvt_element>

@@ -101,7 +101,7 @@
                     <div class="method-list-content passed suite-Selenium_Project">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Selenium_Project" title="edu.utexas.ece.testCases.TestGoogle" hash-for-method="testLinkedInLogin(/googleConfigs.xml)">testLinkedInLogin(/googleConfigs.xml)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Selenium_Project" title="edu.utexas.ece.testCases.TestFacebook" hash-for-method="testFacebookLogin(/facebookParams.xml, /facebookXPath.xml)">testFacebookLogin(/facebookParams.xml, /facebookXPath.xml)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Selenium_Project -->
@@ -119,15 +119,15 @@
           <div class="suite-Selenium_Project-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">edu.utexas.ece.testCases.TestGoogle</span>
+              <span class="class-name">edu.utexas.ece.testCases.TestFacebook</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testLinkedInLogin(/googleConfigs.xml)">
-                  </a> <!-- testLinkedInLogin(/googleConfigs.xml) -->
-                  <span class="method-name">testLinkedInLogin</span>
-                  <span class="parameters">(/googleConfigs.xml)</span>
+                  <a name="testFacebookLogin(/facebookParams.xml, /facebookXPath.xml)">
+                  </a> <!-- testFacebookLogin(/facebookParams.xml, /facebookXPath.xml) -->
+                  <span class="method-name">testFacebookLogin</span>
+                  <span class="parameters">(/facebookParams.xml, /facebookXPath.xml)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -141,13 +141,15 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Selenium Project&quot;&gt;
-  &lt;parameter name=&quot;GoogleParams&quot; value=&quot;/googleConfigs.xml&quot;/&gt;
-  &lt;parameter name=&quot;LinkedInParams&quot; value=&quot;/linkedInConfigs.xml&quot;/&gt;
-  &lt;test name=&quot;Test Google&quot;&gt;
+  &lt;parameter name=&quot;googleParams&quot; value=&quot;/googleParams.xml&quot;/&gt;
+  &lt;parameter name=&quot;facebookParams&quot; value=&quot;/facebookParams.xml&quot;/&gt;
+  &lt;parameter name=&quot;facebookXPath&quot; value=&quot;/facebookXPath.xml&quot;/&gt;
+  &lt;parameter name=&quot;googleXPath&quot; value=&quot;/googleXPath.xml&quot;/&gt;
+  &lt;test name=&quot;Test Facebook&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;edu.utexas.ece.testCases.TestGoogle&quot;/&gt;
+      &lt;class name=&quot;edu.utexas.ece.testCases.TestFacebook&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test Google --&gt;
+  &lt;/test&gt; &lt;!-- Test Facebook --&gt;
 &lt;/suite&gt; &lt;!-- Selenium Project --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -159,7 +161,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test Google (1 class)</span>
+                <span class="test-name">Test Facebook (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -187,9 +189,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testLinkedInLogin')
-data.setCell(0, 2, 'edu.utexas.ece.testCases.TestGoogle')
-data.setCell(0, 3, 7719);
+data.setCell(0, 1, 'testFacebookLogin')
+data.setCell(0, 2, 'edu.utexas.ece.testCases.TestFacebook')
+data.setCell(0, 3, 7397);
 window.suiteTableData['Selenium_Project']= { tableData: data, tableDiv: 'times-div-Selenium_Project'}
 return data;
 }
@@ -220,18 +222,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">edu.utexas.ece.testCases.TestGoogle</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">edu.utexas.ece.testCases.TestFacebook</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">testLinkedInLogin(/googleConfigs.xml)</span>
-                <span class="method-start">10130 ms</span>
+                <span class="method-name">testFacebookLogin(/facebookParams.xml, /facebookXPath.xml)</span>
+                <span class="method-start">5311 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">destory</span>
-                <span class="method-start">17849 ms</span>
+                <span class="method-start">12708 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

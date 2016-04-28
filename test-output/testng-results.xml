@@ -2,31 +2,36 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Selenium Project" duration-ms="19385" started-at="2016-04-28T00:16:17Z" finished-at="2016-04-28T00:16:36Z">
+  <suite name="Selenium Project" duration-ms="13379" started-at="2016-04-28T06:14:43Z" finished-at="2016-04-28T06:14:57Z">
     <groups>
     </groups>
-    <test name="Test Google" duration-ms="19385" started-at="2016-04-28T00:16:17Z" finished-at="2016-04-28T00:16:36Z">
-      <class name="edu.utexas.ece.testCases.TestGoogle">
-        <test-method status="PASS" signature="init()[pri:0, instance:edu.utexas.ece.testCases.TestGoogle@60215eee]" name="init" is-config="true" duration-ms="10114" started-at="2016-04-27T19:16:17Z" finished-at="2016-04-27T19:16:27Z">
+    <test name="Test Facebook" duration-ms="13379" started-at="2016-04-28T06:14:43Z" finished-at="2016-04-28T06:14:57Z">
+      <class name="edu.utexas.ece.testCases.TestFacebook">
+        <test-method status="PASS" signature="init()[pri:0, instance:edu.utexas.ece.testCases.TestFacebook@490d6c15]" name="init" is-config="true" duration-ms="5309" started-at="2016-04-28T01:14:43Z" finished-at="2016-04-28T01:14:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testLinkedInLogin(java.lang.String)[pri:0, instance:edu.utexas.ece.testCases.TestGoogle@60215eee]" name="testLinkedInLogin" duration-ms="7719" started-at="2016-04-27T19:16:27Z" finished-at="2016-04-27T19:16:35Z">
+        <test-method status="PASS" signature="testFacebookLogin(java.lang.String, java.lang.String)[pri:0, instance:edu.utexas.ece.testCases.TestFacebook@490d6c15]" name="testFacebookLogin" duration-ms="7397" started-at="2016-04-28T01:14:49Z" finished-at="2016-04-28T01:14:56Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[/googleConfigs.xml]]>
+                <![CDATA[/facebookParams.xml]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[/facebookXPath.xml]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLinkedInLogin -->
-        <test-method status="PASS" signature="destory()[pri:0, instance:edu.utexas.ece.testCases.TestGoogle@60215eee]" name="destory" is-config="true" duration-ms="1528" started-at="2016-04-27T19:16:35Z" finished-at="2016-04-27T19:16:36Z">
+        </test-method> <!-- testFacebookLogin -->
+        <test-method status="PASS" signature="destory()[pri:0, instance:edu.utexas.ece.testCases.TestFacebook@490d6c15]" name="destory" is-config="true" duration-ms="663" started-at="2016-04-28T01:14:56Z" finished-at="2016-04-28T01:14:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- destory -->
-      </class> <!-- edu.utexas.ece.testCases.TestGoogle -->
-    </test> <!-- Test Google -->
+      </class> <!-- edu.utexas.ece.testCases.TestFacebook -->
+    </test> <!-- Test Facebook -->
   </suite> <!-- Selenium Project -->
 </testng-results>
