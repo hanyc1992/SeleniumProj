@@ -12,7 +12,8 @@ import static org.testng.AssertJUnit.assertTrue;
  * Created by hanyc on 4/27/2016.
  */
 public class TestTasks {
-    static private int WAIT_THRESHOLD = 30;
+    //    in millisecond
+    static private int WAIT_THRESHOLD = 5000;
 
     private SeleniumUtils utils;
     private Selenium selenium;
@@ -46,6 +47,6 @@ public class TestTasks {
 
     //    Verifies that the specified text pattern appears somewhere on the rendered page shown to the user.
     public void verifyResult(final String pattern) {
-        assertTrue(selenium.isTextPresent(pattern));
+        assertTrue(utils.waitForText(pattern, WAIT_THRESHOLD));
     }
 }

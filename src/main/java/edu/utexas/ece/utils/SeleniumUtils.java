@@ -33,105 +33,49 @@ public class SeleniumUtils extends SeleneseTestCase {
         try {
             Thread.sleep(millisecs);
         } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
-    public boolean waitForElementEditable(String locator, int seconds) {
+    public boolean waitForElementEditable(String locator, int millisecs) {
         boolean elementEditable = false;
-        for (int second = 0; ; second++) {
-
-            // If loop is reached 60 seconds then break the loop.
-            if (second >= seconds)
+        int time = 0;
+        while (time < millisecs) {
+            if (selenium.isEditable(locator)) {
+                elementEditable = true;
                 break;
-
-            // Search for element "link=ajaxLink" and if available then break
-            // loop.
-            try {
-                if (selenium.isEditable(locator)) {
-                    elementEditable = true;
-                    break;
-                }
-
-            } catch (Exception e) {
             }
-
-            // Pause for 1 second.
-            pause(1000);
+            time += 100;
+            pause(100);
         }
-
         return elementEditable;
-
     }
 
-
-    public boolean waitForElement(String locator, int seconds) {
+    public boolean waitForElement(String locator, int millisecs) {
         boolean elementExist = false;
-        for (int second = 0; ; second++) {
-
-            // If loop is reached 60 seconds then break the loop.
-            if (second >= seconds)
+        int time = 0;
+        while (time < millisecs) {
+            if (selenium.isElementPresent(locator)) {
+                elementExist = true;
                 break;
-
-            // Search for element "link=ajaxLink" and if available then break
-            // loop.
-            try {
-                if (selenium.isElementPresent(locator)) {
-                    elementExist = true;
-                    break;
-                }
-
-            } catch (Exception e) {
-                System.out.println(e);
             }
-
-            // Pause for 1 second.
-            pause(1000);
+            time += 100;
+            pause(100);
         }
-
         return elementExist;
-
     }
 
-    public boolean waitForText(String tmplName, int seconds) {
+    public boolean waitForText(String tmplName, int millisecs) {
         boolean textExist = false;
-        for (int second = 0; ; second++) {
-
-            // If loop is reached 60 seconds then break the loop.
-            if (second >= seconds)
+        int time = 0;
+        while (time < millisecs) {
+            if (selenium.isTextPresent(tmplName)) {
+                textExist = true;
                 break;
-
-            // Search for element "link=ajaxLink" and if available then break
-            // loop.
-            try {
-                if (selenium.isTextPresent(tmplName)) {
-                    textExist = true;
-                    break;
-                }
-
-            } catch (Exception e) {
             }
-
-            // Pause for 1 second.
-            pause(1000);
+            time += 100;
+            pause(100);
         }
-
         return textExist;
-    }
-
-    /**
-     * @param mis
-     */
-    public void waitForPageToLoad(String mis) {
-        boolean isLoaded = false;
-        int count = 0;
-        do {
-            if (count++ > 3) break;
-            try {
-                selenium.waitForPageToLoad(mis);
-                isLoaded = true;
-            } catch (Exception ex) {
-                continue;
-            }
-        } while (!isLoaded);
     }
 }

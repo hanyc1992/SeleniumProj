@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Selenium Project" duration-ms="13379" started-at="2016-04-28T06:14:43Z" finished-at="2016-04-28T06:14:57Z">
+  <suite name="Selenium Project" duration-ms="21670" started-at="2016-04-29T03:48:28Z" finished-at="2016-04-29T03:48:50Z">
     <groups>
     </groups>
-    <test name="Test Facebook" duration-ms="13379" started-at="2016-04-28T06:14:43Z" finished-at="2016-04-28T06:14:57Z">
-      <class name="edu.utexas.ece.testCases.TestFacebook">
-        <test-method status="PASS" signature="init()[pri:0, instance:edu.utexas.ece.testCases.TestFacebook@490d6c15]" name="init" is-config="true" duration-ms="5309" started-at="2016-04-28T01:14:43Z" finished-at="2016-04-28T01:14:49Z">
+    <test name="Test Google" duration-ms="9758" started-at="2016-04-29T03:48:28Z" finished-at="2016-04-29T03:48:38Z">
+      <class name="edu.utexas.ece.testCases.TestGoogle">
+        <test-method status="PASS" signature="init()[pri:0, instance:edu.utexas.ece.testCases.TestGoogle@490d6c15]" name="init" is-config="true" duration-ms="5588" started-at="2016-04-28T22:48:28Z" finished-at="2016-04-28T22:48:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testFacebookLogin(java.lang.String, java.lang.String)[pri:0, instance:edu.utexas.ece.testCases.TestFacebook@490d6c15]" name="testFacebookLogin" duration-ms="7397" started-at="2016-04-28T01:14:49Z" finished-at="2016-04-28T01:14:56Z">
+        <test-method status="PASS" signature="testGoogleSearch(java.lang.String, java.lang.String)[pri:0, instance:edu.utexas.ece.testCases.TestGoogle@490d6c15]" name="testGoogleSearch" duration-ms="3633" started-at="2016-04-28T22:48:34Z" finished-at="2016-04-28T22:48:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[/googleParams.xml]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[/googleXPath.xml]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGoogleSearch -->
+        <test-method status="PASS" signature="destory()[pri:0, instance:edu.utexas.ece.testCases.TestGoogle@490d6c15]" name="destory" is-config="true" duration-ms="529" started-at="2016-04-28T22:48:37Z" finished-at="2016-04-28T22:48:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- destory -->
+      </class> <!-- edu.utexas.ece.testCases.TestGoogle -->
+    </test> <!-- Test Google -->
+    <test name="Test Facebook" duration-ms="11889" started-at="2016-04-29T03:48:38Z" finished-at="2016-04-29T03:48:50Z">
+      <class name="edu.utexas.ece.testCases.TestFacebook">
+        <test-method status="PASS" signature="init()[pri:0, instance:edu.utexas.ece.testCases.TestFacebook@3ac42916]" name="init" is-config="true" duration-ms="3879" started-at="2016-04-28T22:48:38Z" finished-at="2016-04-28T22:48:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testFacebookLogin(java.lang.String, java.lang.String)[pri:0, instance:edu.utexas.ece.testCases.TestFacebook@3ac42916]" name="testFacebookLogin" duration-ms="7235" started-at="2016-04-28T22:48:42Z" finished-at="2016-04-28T22:48:49Z">
           <params>
             <param index="0">
               <value>
@@ -27,7 +55,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFacebookLogin -->
-        <test-method status="PASS" signature="destory()[pri:0, instance:edu.utexas.ece.testCases.TestFacebook@490d6c15]" name="destory" is-config="true" duration-ms="663" started-at="2016-04-28T01:14:56Z" finished-at="2016-04-28T01:14:57Z">
+        <test-method status="PASS" signature="destory()[pri:0, instance:edu.utexas.ece.testCases.TestFacebook@3ac42916]" name="destory" is-config="true" duration-ms="774" started-at="2016-04-28T22:48:49Z" finished-at="2016-04-28T22:48:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- destory -->

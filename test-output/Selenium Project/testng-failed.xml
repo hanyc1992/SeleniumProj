@@ -5,15 +5,21 @@
   <parameter name="facebookParams" value="/facebookParams.xml"/>
   <parameter name="facebookXPath" value="/facebookXPath.xml"/>
   <parameter name="googleXPath" value="/googleXPath.xml"/>
-  <test name="Test Facebook(failed)">
+  <test name="Test Google(failed)">
     <classes>
       <class name="edu.utexas.ece.testCases.TestFacebook">
         <methods>
-          <include name="testFacebookLogin" invocation-numbers="0"/>
           <include name="destory"/>
           <include name="init"/>
         </methods>
       </class> <!-- edu.utexas.ece.testCases.TestFacebook -->
+      <class name="edu.utexas.ece.testCases.TestGoogle">
+        <methods>
+          <include name="destory"/>
+          <include name="init"/>
+          <include name="testGoogleSearch" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- edu.utexas.ece.testCases.TestGoogle -->
     </classes>
-  </test> <!-- Test Facebook(failed) -->
+  </test> <!-- Test Google(failed) -->
 </suite> <!-- Failed suite [Selenium Project] -->

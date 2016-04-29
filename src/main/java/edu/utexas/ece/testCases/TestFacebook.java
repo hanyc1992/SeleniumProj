@@ -48,14 +48,6 @@ public class TestFacebook {
         utils.pause(1000);
     }
 
-    private void deleteAllCookies() {
-        if (webDriver == null) {
-            return;
-        }
-
-    }
-
-
     @AfterClass
     public void destory() {
         if(webDriver != null){
