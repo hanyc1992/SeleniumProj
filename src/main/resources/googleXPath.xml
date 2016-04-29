@@ -5,6 +5,6 @@
     </arg>
 
     <arg id="googleSearchBtn">
-        <value>//input[@name='btnK')</value>
+        <value>//button[@name='btnG')</value>
     </arg>
 </fvt_element>

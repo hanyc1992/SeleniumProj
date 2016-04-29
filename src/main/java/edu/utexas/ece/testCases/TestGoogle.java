@@ -41,7 +41,7 @@ public class TestGoogle {
 
         testTasks.openSite();
         testTasks.typeSearchTxtField(xPathMap.get("googleSearchTxtField"), paramsMap.get("googleSearchTxtField"));
-        testTasks.clickSearchBtn(xPathMap.get("googleSearchBtn"));
+        testTasks.clickBtn(xPathMap.get("googleSearchBtn"));
         testTasks.verifyResult(paramsMap.get("verify-String"));
         utils.pause(1000);
     }

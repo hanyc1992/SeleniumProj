@@ -43,7 +43,7 @@ public class TestFacebook {
         testTasks.deleteAllCookies();
         testTasks.typeSearchTxtField(xPathMap.get("loginUserName"), paramsMap.get("userNameA"));
         testTasks.typeSearchTxtField(xPathMap.get("loginUserPassword"), paramsMap.get("passwordA"));
-        testTasks.clickSearchBtn(xPathMap.get("loginClkBtn"));
+        testTasks.clickBtn(xPathMap.get("loginClkBtn"));
         testTasks.verifyResult(paramsMap.get("verifyStringAfterLogin"));
         utils.pause(1000);
     }

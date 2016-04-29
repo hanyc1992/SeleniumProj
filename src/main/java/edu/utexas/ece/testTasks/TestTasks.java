@@ -40,13 +40,15 @@ public class TestTasks {
         selenium.type(locator, text);
     }
 
-    public void clickSearchBtn(final String locator) {
+    public void clickBtn(final String locator) {
         assertTrue(utils.waitForElement(locator, WAIT_THRESHOLD));
         selenium.click(locator);
     }
 
     //    Verifies that the specified text pattern appears somewhere on the rendered page shown to the user.
     public void verifyResult(final String pattern) {
-        assertTrue(utils.waitForText(pattern, WAIT_THRESHOLD));
+        final boolean result = utils.waitForText(pattern, WAIT_THRESHOLD);
+        System.out.println("the result is " + result);
+        assertTrue(result);
     }
 }
