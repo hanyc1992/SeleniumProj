@@ -11,4 +11,8 @@
     <arg id="loginClkBtn">
         <value>//input[@type='submit')</value>
     </arg>
+
+    <arg id="editProfileLink">
+        <value>//div[a='Edit Profile')</value>
+    </arg>
 </fvt_element>

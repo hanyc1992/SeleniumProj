@@ -48,6 +48,24 @@ public class TestFacebook {
         utils.pause(1000);
     }
 
+//    @Test
+//    @Parameters({"facebookParams", "facebookXPath"})
+//    public void testFacebookVisibilitySetting(String paramsFileName, final String xPathFileName) {
+//        final Map<String, String> paramsMap = XMLParser.getInstance().getMap(paramsFileName);
+//        final Map<String, String> xPathMap = XMLParser.getInstance().getMap(xPathFileName);
+//        System.out.println("the paramsMap is " + paramsMap);
+//        System.out.println("the xPathMap is " + xPathMap);
+//
+//        /* Setting Visibility in account B */
+//        testTasks.openSite();
+//        testTasks.deleteAllCookies();
+//        testTasks.typeSearchTxtField(xPathMap.get("loginUserName"), paramsMap.get("userNameA"));
+//        testTasks.typeSearchTxtField(xPathMap.get("loginUserPassword"), paramsMap.get("passwordA"));
+//        testTasks.clickBtn(xPathMap.get("loginClkBtn"));
+//        testTasks.clickBtn(xPathMap.get("editProfileLink"));
+//    }
+
+
     @AfterClass
     public void destory() {
         if(webDriver != null){

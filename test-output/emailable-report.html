@@ -31,41 +31,61 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Test Google</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">5.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
-<tr class="stripe"><td style="text-align:left;padding-right:2em">Test Facebook</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">10.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
-<tr class="total"><td>Total</td>
-<td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">15.7 seconds</td><td colspan="2">&nbsp;</td></tr>
+<tr><td style="text-align:left;padding-right:2em">Test Facebook</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">6.6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Test Google &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">edu.utexas.ece.testCases.TestGoogle</td><td><a href="#m1"><b>testGoogleSearch</b>  </a></td><td class="numi">1</td><td>1461964575301</td><td class="numi">3102</td></tr>
 <tr><th colspan="4">Test Facebook &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="1">edu.utexas.ece.testCases.TestFacebook</td><td><a href="#m2"><b>testFacebookLogin</b>  </a></td><td class="numi">1</td><td>1461964580055</td><td class="numi">8660</td></tr>
+<tr class="failedodd"><td rowspan="1">edu.utexas.ece.testCases.TestFacebook</td><td><a href="#m1"><b>testFacebookVisibilitySetting</b>  </a></td><td class="numi">1</td><td>1462045958789</td><td class="numi">4195</td></tr>
 </table>
-<h1>Test Google</h1>
-<h2 id="m1">edu.utexas.ece.testCases.TestGoogle:testGoogleSearch</h2>
-<table cellspacing="0" cellpadding="0" class="result">
-<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
-<tr class="param stripe"><td>/googleParams.xml</td>
-<td>/googleXPath.xml</td>
-</tr>
-</table>
-<p class="totop"><a href="#summary">back to summary</a></p>
 <h1>Test Facebook</h1>
-<h2 id="m2">edu.utexas.ece.testCases.TestFacebook:testFacebookLogin</h2>
+<h2 id="m1">edu.utexas.ece.testCases.TestFacebook:testFacebookVisibilitySetting</h2>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
 <tr class="param stripe"><td>/facebookParams.xml</td>
 <td>/facebookXPath.xml</td>
 </tr>
 <tr><td style="padding-left:3em" colspan="2">
-<p></p>
-org.testng.AssertJUnit.fail(AssertJUnit.java:59)
-<br/>at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:24)
-<br/>at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:33)
-<br/>at edu.utexas.ece.testTasks.TestTasks.verifyResult(TestTasks.java:52)
-<br/>at edu.utexas.ece.testCases.TestFacebook.testFacebookLogin(TestFacebook.java:47)
+<p>Element is not clickable at point (151, 91.08332824707031). Other element would receive the click: &lt;a class=&quot;fbxWelcomeBoxSmallLeft _8o _8r lfloat _ohe&quot; href=&quot;https://www.facebook.com/shushu.wang.10/about?ref=bookmarks&amp;amp;section=work&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;&lt;/a&gt;
+Command duration or timeout: 62 milliseconds
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;wireless-10-145-133-120.public.utexas.edu&apos;, ip: &apos;10.145.133.120&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.8.0_74&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=42.0, platform=MAC, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0faa6a1c-51f7-cf41-9259-12ec65251205</p>
+com.thoughtworks.selenium.webdriven.SeleneseCommand.apply(SeleneseCommand.java:45)
+<br/>at com.thoughtworks.selenium.webdriven.Timer.run(Timer.java:41)
+<br/>at com.thoughtworks.selenium.webdriven.WebDriverCommandProcessor.execute(WebDriverCommandProcessor.java:149)
+<br/>at com.thoughtworks.selenium.webdriven.WebDriverCommandProcessor.doCommand(WebDriverCommandProcessor.java:74)
+<br/>at com.thoughtworks.selenium.DefaultSelenium.click(DefaultSelenium.java:198)
+<br/>at edu.utexas.ece.testTasks.TestTasks.clickBtn(TestTasks.java:45)
+<br/>at edu.utexas.ece.testCases.TestFacebook.testFacebookVisibilitySetting(TestFacebook.java:65)
+<br/>28 lines not shown
+<p>Caused by Element is not clickable at point (151, 91.08332824707031). Other element would receive the click: &lt;a class=&quot;fbxWelcomeBoxSmallLeft _8o _8r lfloat _ohe&quot; href=&quot;https://www.facebook.com/shushu.wang.10/about?ref=bookmarks&amp;amp;section=work&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;&lt;/a&gt;
+Command duration or timeout: 62 milliseconds
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;wireless-10-145-133-120.public.utexas.edu&apos;, ip: &apos;10.145.133.120&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.8.0_74&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=42.0, platform=MAC, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0faa6a1c-51f7-cf41-9259-12ec65251205</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+<br/>at com.thoughtworks.selenium.webdriven.commands.Click.handleSeleneseCommand(Click.java:40)
+<br/>at com.thoughtworks.selenium.webdriven.commands.Click.handleSeleneseCommand(Click.java:26)
+<br/>at com.thoughtworks.selenium.webdriven.SeleneseCommand.apply(SeleneseCommand.java:36)
+<br/>at com.thoughtworks.selenium.webdriven.Timer.run(Timer.java:41)
+<br/>at com.thoughtworks.selenium.webdriven.WebDriverCommandProcessor.execute(WebDriverCommandProcessor.java:149)
+<br/>at com.thoughtworks.selenium.webdriven.WebDriverCommandProcessor.doCommand(WebDriverCommandProcessor.java:74)
+<br/>at com.thoughtworks.selenium.DefaultSelenium.click(DefaultSelenium.java:198)
+<br/>at edu.utexas.ece.testTasks.TestTasks.clickBtn(TestTasks.java:45)
+<br/>at edu.utexas.ece.testCases.TestFacebook.testFacebookVisibilitySetting(TestFacebook.java:65)
 <br/>28 lines not shown
 </td></tr>
 </table>

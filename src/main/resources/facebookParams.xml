@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fvt_element>
     <arg id="userNameA">
-        <value>userNameA</value>
+        <value>5128970773</value>
     </arg>
 
     <arg id="passwordA">
-        <value>passwordA</value>
+        <value>@zju.edu.cn</value>
+    </arg>
+
+    <arg id="userNameB">
+        <value>5128970773</value>
+    </arg>
+
+    <arg id="passwordB">
+        <value>@utexas.edu</value>
     </arg>
 
     <arg id="verifyStringAfterLogin">
