@@ -11,4 +11,19 @@
     <arg id="loginClkBtn">
         <value>//input[@type='submit')</value>
     </arg>
+
+    <arg id="profile">
+        <value>//a[@title='Profile')</value>
+    </arg>
+
+    <!--<arg id="postTextArea">-->
+    <!--<value>/div/form/div[1]/div[2]/div/textarea</value>-->
+    <!--</arg>-->
+
+    <arg id="postTextArea">
+        <value>//textarea[@name='xhpc_message_text')</value>
+    </arg>
+    <arg id="postButton">
+        <value>//button[@data-testid='react-composer-post-button')</value>
+    </arg>
 </fvt_element>

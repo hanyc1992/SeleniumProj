@@ -31,9 +31,26 @@ public class TestFacebook {
         testTasks = new TestTasks(utils);
     }
 
+//    @Test
+//    @Parameters({"facebookParams", "facebookXPath"})
+//    public void testFacebookLogin(String paramsFileName, final String xPathFileName) {
+//        final Map<String, String> paramsMap = XMLParser.getInstance().getMap(paramsFileName);
+//        final Map<String, String> xPathMap = XMLParser.getInstance().getMap(xPathFileName);
+//        System.out.println("the paramsMap is " + paramsMap);
+//        System.out.println("the xPathMap is " + xPathMap);
+//
+//        testTasks.openSite();
+//        testTasks.deleteAllCookies();
+//        testTasks.typeSearchTxtField(xPathMap.get("loginUserName"), paramsMap.get("userNameA"));
+//        testTasks.typeSearchTxtField(xPathMap.get("loginUserPassword"), paramsMap.get("passwordA"));
+//        testTasks.clickSearchBtn(xPathMap.get("loginClkBtn"));
+//        testTasks.verifyResult(paramsMap.get("verifyStringAfterLogin"));
+//        utils.pause(1000);
+//    }
+
     @Test
     @Parameters({"facebookParams", "facebookXPath"})
-    public void testFacebookLogin(String paramsFileName, final String xPathFileName) {
+    public void testFacebookPost(String paramsFileName, final String xPathFileName) {
         final Map<String, String> paramsMap = XMLParser.getInstance().getMap(paramsFileName);
         final Map<String, String> xPathMap = XMLParser.getInstance().getMap(xPathFileName);
         System.out.println("the paramsMap is " + paramsMap);
@@ -41,10 +58,16 @@ public class TestFacebook {
 
         testTasks.openSite();
         testTasks.deleteAllCookies();
-        testTasks.typeSearchTxtField(xPathMap.get("loginUserName"), paramsMap.get("userNameA"));
-        testTasks.typeSearchTxtField(xPathMap.get("loginUserPassword"), paramsMap.get("passwordA"));
+        testTasks.typeSearchTxtField(xPathMap.get("loginUserName"), paramsMap.get("wangAyiUserName"));
+        testTasks.typeSearchTxtField(xPathMap.get("loginUserPassword"), paramsMap.get("wangAyiPassword"));
         testTasks.clickSearchBtn(xPathMap.get("loginClkBtn"));
         testTasks.verifyResult(paramsMap.get("verifyStringAfterLogin"));
+        testTasks.clickSearchBtn(xPathMap.get("profile"));
+        testTasks.verifyResult(paramsMap.get("verifyStringAfterClickProfile"));
+        testTasks.typeSearchTxtField(xPathMap.get("postTextArea"), paramsMap.get("firstPost"));
+        testTasks.clickSearchBtn(xPathMap.get("postButton"));
+        utils.pause(1000);
+        testTasks.verifyResult(paramsMap.get("verifyFirstPostExist"));
         utils.pause(1000);
     }
 
