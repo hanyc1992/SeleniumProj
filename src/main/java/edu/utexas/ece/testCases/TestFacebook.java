@@ -48,9 +48,40 @@ public class TestFacebook {
 //        utils.pause(1000);
 //    }
 
+//    @Test
+//    @Parameters({"facebookParams", "facebookXPath"})
+//    public void testFacebookPost(String paramsFileName, final String xPathFileName) {
+//        final Map<String, String> paramsMap = XMLParser.getInstance().getMap(paramsFileName);
+//        final Map<String, String> xPathMap = XMLParser.getInstance().getMap(xPathFileName);
+//        System.out.println("the paramsMap is " + paramsMap);
+//        System.out.println("the xPathMap is " + xPathMap);
+//
+//        testTasks.openSite();
+//        testTasks.deleteAllCookies();
+//        testTasks.typeSearchTxtField(xPathMap.get("loginUserName"), paramsMap.get("wangAyiUserName"));
+//        testTasks.typeSearchTxtField(xPathMap.get("loginUserPassword"), paramsMap.get("wangAyiPassword"));
+//        testTasks.clickSearchBtn(xPathMap.get("loginClkBtn"));
+//        testTasks.verifyResult(paramsMap.get("verifyStringAfterLogin"));
+//        testTasks.clickSearchBtn(xPathMap.get("profile"));
+//        testTasks.verifyResult(paramsMap.get("verifyStringAfterClickProfile"));
+//        testTasks.typeSearchTxtField(xPathMap.get("postTextArea"), paramsMap.get("firstPost"));
+//        testTasks.clickSearchBtn(xPathMap.get("postButton"));
+//        testTasks.verifyResult(paramsMap.get("verifyFirstPostExist"));
+//        utils.pause(2000);
+//        testTasks.clickSearchBtn(xPathMap.get("dropDownButton"));
+//        testTasks.clickSearchBtn(xPathMap.get("deleteButton"));
+//        utils.pause(2000);
+//        testTasks.clickSearchBtn(xPathMap.get("confirmDeletePost"));
+////        testTasks.verifyDisappearance(paramsMap.get("verifyFirstPostExist"));
+//        utils.pause(1000);
+////        testTasks.verifyResult(paramsMap.get("verifyFirstPostExist"));
+//        testTasks.verifyDisappearance(xPathMap.get("postLocator"));
+//        utils.pause(1000);
+//    }
+
     @Test
     @Parameters({"facebookParams", "facebookXPath"})
-    public void testFacebookPost(String paramsFileName, final String xPathFileName) {
+    public void testFacebookPostOrder(String paramsFileName, final String xPathFileName) {
         final Map<String, String> paramsMap = XMLParser.getInstance().getMap(paramsFileName);
         final Map<String, String> xPathMap = XMLParser.getInstance().getMap(xPathFileName);
         System.out.println("the paramsMap is " + paramsMap);
@@ -66,10 +97,14 @@ public class TestFacebook {
         testTasks.verifyResult(paramsMap.get("verifyStringAfterClickProfile"));
         testTasks.typeSearchTxtField(xPathMap.get("postTextArea"), paramsMap.get("firstPost"));
         testTasks.clickSearchBtn(xPathMap.get("postButton"));
-        utils.pause(1000);
+//        utils.pause(1000);
         testTasks.verifyResult(paramsMap.get("verifyFirstPostExist"));
-        utils.pause(1000);
+        utils.pause(8000);
+        testTasks.typeSearchTxtField(xPathMap.get("postTextArea"), paramsMap.get("secondPost"));
+        testTasks.clickSearchBtn(xPathMap.get("postButton"));
+//        utils.pause(1000);
     }
+
 
     @AfterClass
     public void destory() {

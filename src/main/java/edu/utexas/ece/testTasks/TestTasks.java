@@ -5,6 +5,7 @@ import edu.utexas.ece.utils.SeleniumUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.internal.WrapsDriver;
 
+import static org.testng.AssertJUnit.assertFalse;
 import static org.testng.AssertJUnit.assertTrue;
 
 
@@ -48,5 +49,9 @@ public class TestTasks {
     //    Verifies that the specified text pattern appears somewhere on the rendered page shown to the user.
     public void verifyResult(final String pattern) {
         assertTrue(utils.waitForText(pattern, WAIT_THRESHOLD));
+    }
+
+    public void verifyDisappearance(final String locator) {
+        assertFalse(utils.waitForElement(locator, WAIT_THRESHOLD));
     }
 }

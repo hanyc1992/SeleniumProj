@@ -31,4 +31,8 @@
     <arg id="firstPost">
         <value>This is my first post.</value>
     </arg>
+
+    <arg id="secondPost">
+        <value>This is my second post.</value>
+    </arg>
 </fvt_element>

@@ -9,7 +9,7 @@
     <classes>
       <class name="edu.utexas.ece.testCases.TestFacebook">
         <methods>
-          <include name="testFacebookPost" invocation-numbers="0"/>
+          <include name="testFacebookEditProfile" invocation-numbers="0"/>
           <include name="destory"/>
           <include name="init"/>
         </methods>

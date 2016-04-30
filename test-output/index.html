@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Selenium_Project">
-              <span class="suite-name border-passed">Selenium Project</span>
+              <span class="suite-name border-failed">Selenium Project</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Selenium_Project" class="hide-methods passed suite-Selenium_Project"> (hide)</a> <!-- hide-methods passed suite-Selenium_Project -->
-                      <a href="#" panel-name="suite-Selenium_Project" class="show-methods passed suite-Selenium_Project"> (show)</a> <!-- show-methods passed suite-Selenium_Project -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Selenium_Project" class="hide-methods failed suite-Selenium_Project"> (hide)</a> <!-- hide-methods failed suite-Selenium_Project -->
+                      <a href="#" panel-name="suite-Selenium_Project" class="show-methods failed suite-Selenium_Project"> (show)</a> <!-- show-methods failed suite-Selenium_Project -->
                     </span>
-                    <div class="method-list-content passed suite-Selenium_Project">
+                    <div class="method-list-content failed suite-Selenium_Project">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Selenium_Project" title="edu.utexas.ece.testCases.TestFacebook" hash-for-method="testFacebookPost(/facebookParams.xml, /facebookXPath.xml)">testFacebookPost(/facebookParams.xml, /facebookXPath.xml)</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Selenium_Project" title="edu.utexas.ece.testCases.TestFacebook" hash-for-method="testFacebookEditProfile(/facebookParams.xml, /facebookXPath.xml)">testFacebookEditProfile(/facebookParams.xml, /facebookXPath.xml)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Selenium_Project -->
+                    </div> <!-- method-list-content failed suite-Selenium_Project -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,22 +116,117 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Selenium_Project" class="panel Selenium_Project">
-          <div class="suite-Selenium_Project-class-passed">
+          <div class="suite-Selenium_Project-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">edu.utexas.ece.testCases.TestFacebook</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testFacebookPost(/facebookParams.xml, /facebookXPath.xml)">
-                  </a> <!-- testFacebookPost(/facebookParams.xml, /facebookXPath.xml) -->
-                  <span class="method-name">testFacebookPost</span>
+                  <a name="testFacebookEditProfile(/facebookParams.xml, /facebookXPath.xml)">
+                  </a> <!-- testFacebookEditProfile(/facebookParams.xml, /facebookXPath.xml) -->
+                  <span class="method-name">testFacebookEditProfile</span>
                   <span class="parameters">(/facebookParams.xml, /facebookXPath.xml)</span>
+                  <div class="stack-trace"><b>"com.thoughtworks.selenium.SeleniumException: Element is not clickable at point (104.5, 90.61666870117188). Other element would receive the click: &lt;a class=&quot;fbxWelcomeBoxSmallLeft _8o _8r lfloat _ohe&quot; href=&quot;https://www.facebook.com/shushu.wang.10/about?ref=bookmarks&amp;amp;section=work&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;&lt;/a&gt;
+Command duration or timeout: 76 milliseconds
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;wireless-10-146-157-184.public.utexas.edu&apos;, ip: &apos;10.146.157.184&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=43.0.4, platform=MAC, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: d09ff471-0b43-7d42-ab45-f8efc5a5be84
+	at com.thoughtworks.selenium.webdriven.SeleneseCommand.apply(SeleneseCommand.java:45)
+	at com.thoughtworks.selenium.webdriven.Timer.run(Timer.java:41)
+	at com.thoughtworks.selenium.webdriven.WebDriverCommandProcessor.execute(WebDriverCommandProcessor.java:149)
+	at com.thoughtworks.selenium.webdriven.WebDriverCommandProcessor.doCommand(WebDriverCommandProcessor.java:74)
+	at com.thoughtworks.selenium.DefaultSelenium.click(DefaultSelenium.java:198)
+	at edu.utexas.ece.testTasks.TestTasks.clickSearchBtn(TestTasks.java:46)
+	at edu.utexas.ece.testCases.TestFacebook.testFacebookEditProfile(TestFacebook.java:122)
+	at edu.utexas.ece.SeleniumMain.main(SeleniumMain.java:51)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+Caused by: org.openqa.selenium.WebDriverException: Element is not clickable at point (104.5, 90.61666870117188). Other element would receive the click: &lt;a class=&quot;fbxWelcomeBoxSmallLeft _8o _8r lfloat _ohe&quot; href=&quot;https://www.facebook.com/shushu.wang.10/about?ref=bookmarks&amp;amp;section=work&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;&lt;/a&gt;
+Command duration or timeout: 76 milliseconds
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;wireless-10-146-157-184.public.utexas.edu&apos;, ip: &apos;10.146.157.184&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=43.0.4, platform=MAC, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: d09ff471-0b43-7d42-ab45-f8efc5a5be84
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.thoughtworks.selenium.webdriven.commands.Click.handleSeleneseCommand(Click.java:40)
+	at com.thoughtworks.selenium.webdriven.commands.Click.handleSeleneseCommand(Click.java:26)
+	at com.thoughtworks.selenium.webdriven.SeleneseCommand.apply(SeleneseCommand.java:36)
+	... 33 more
+... Removed 29 stack frames<br/> com.thoughtworks.selenium.SeleniumException: Element is not clickable at point (104.5, 90.61666870117188). Other element would receive the click: &lt;a class=&quot;fbxWelcomeBoxSmallLeft _8o _8r lfloat _ohe&quot; href=&quot;https://www.facebook.com/shushu.wang.10/about?ref=bookmarks&amp;amp;section=work&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;&lt;/a&gt;
+Command duration or timeout: 76 milliseconds
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;wireless-10-146-157-184.public.utexas.edu&apos;, ip: &apos;10.146.157.184&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=43.0.4, platform=MAC, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: d09ff471-0b43-7d42-ab45-f8efc5a5be84
+	at com.thoughtworks.selenium.webdriven.SeleneseCommand.apply(SeleneseCommand.java:45)
+	at com.thoughtworks.selenium.webdriven.Timer.run(Timer.java:41)
+	at com.thoughtworks.selenium.webdriven.WebDriverCommandProcessor.execute(WebDriverCommandProcessor.java:149)
+	at com.thoughtworks.selenium.webdriven.WebDriverCommandProcessor.doCommand(WebDriverCommandProcessor.java:74)
+	at com.thoughtworks.selenium.DefaultSelenium.click(DefaultSelenium.java:198)
+	at edu.utexas.ece.testTasks.TestTasks.clickSearchBtn(TestTasks.java:46)
+	at edu.utexas.ece.testCases.TestFacebook.testFacebookEditProfile(TestFacebook.java:122)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at edu.utexas.ece.SeleniumMain.main(SeleniumMain.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+Caused by: org.openqa.selenium.WebDriverException: Element is not clickable at point (104.5, 90.61666870117188). Other element would receive the click: &lt;a class=&quot;fbxWelcomeBoxSmallLeft _8o _8r lfloat _ohe&quot; href=&quot;https://www.facebook.com/shushu.wang.10/about?ref=bookmarks&amp;amp;section=work&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;&lt;/a&gt;
+Command duration or timeout: 76 milliseconds
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;wireless-10-146-157-184.public.utexas.edu&apos;, ip: &apos;10.146.157.184&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=43.0.4, platform=MAC, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: d09ff471-0b43-7d42-ab45-f8efc5a5be84
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.thoughtworks.selenium.webdriven.commands.Click.handleSeleneseCommand(Click.java:40)
+	at com.thoughtworks.selenium.webdriven.commands.Click.handleSeleneseCommand(Click.java:26)
+	at com.thoughtworks.selenium.webdriven.SeleneseCommand.apply(SeleneseCommand.java:36)
+	... 33 more
+"</b><br>com.thoughtworks.selenium.webdriven.SeleneseCommand.apply(SeleneseCommand.java:45)<br>com.thoughtworks.selenium.webdriven.Timer.run(Timer.java:41)<br>com.thoughtworks.selenium.webdriven.WebDriverCommandProcessor.execute(WebDriverCommandProcessor.java:149)<br>com.thoughtworks.selenium.webdriven.WebDriverCommandProcessor.doCommand(WebDriverCommandProcessor.java:74)<br>com.thoughtworks.selenium.DefaultSelenium.click(DefaultSelenium.java:198)<br>edu.utexas.ece.testTasks.TestTasks.clickSearchBtn(TestTasks.java:46)<br>edu.utexas.ece.testCases.TestFacebook.testFacebookEditProfile(TestFacebook.java:122)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:497)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>edu.utexas.ece.SeleniumMain.main(SeleniumMain.java:51)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:497)<br>com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)<br>
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Selenium_Project-class-passed -->
+          </div> <!-- suite-Selenium_Project-class-failed -->
         </div> <!-- panel Selenium_Project -->
         <div panel-name="test-xml-Selenium_Project" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -189,14 +284,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testFacebookPost')
+data.setCell(0, 1, 'testFacebookEditProfile')
 data.setCell(0, 2, 'edu.utexas.ece.testCases.TestFacebook')
-data.setCell(0, 3, 16228);
+data.setCell(0, 3, 5579);
 window.suiteTableData['Selenium_Project']= { tableData: data, tableDiv: 'times-div-Selenium_Project'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 16 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-Selenium_Project">
               </div> <!-- times-div-Selenium_Project -->
             </div> <!-- times-div -->
@@ -228,12 +323,14 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">testFacebookPost(/facebookParams.xml, /facebookXPath.xml)</span>
-                <span class="method-start">6133 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testFacebookEditProfile(/facebookParams.xml, /facebookXPath.xml)</span>
+                <span class="method-start">4878 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">destory</span>
-                <span class="method-start">22362 ms</span>
+                <span class="method-start">10457 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

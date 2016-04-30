@@ -20,10 +20,53 @@
     <!--<value>/div/form/div[1]/div[2]/div/textarea</value>-->
     <!--</arg>-->
 
+    <!--<arg id="postTextArea">-->
+        <!--<value>//textarea[@name='xhpc_message_text')</value>-->
+    <!--</arg>-->
+    <!--<arg id="postTextArea">-->
+        <!--<value>//div[@title='What's on your mind?')</value>-->
+    <!--</arg>-->
+
+    <!--<arg id="postTextArea">-->
+        <!--<value>//div[@class='_1mwp _1mwq _4c_p _5bu_ _5yk1')</value>-->
+    <!--</arg>-->
+
+    <!--<arg id="postTextArea">-->
+        <!--<value>//div[@class='_1mf _1mj')</value>-->
+    <!--</arg>-->
+
     <arg id="postTextArea">
-        <value>//textarea[@name='xhpc_message_text')</value>
+        <value>//div[@class='_5rpu')</value>
     </arg>
+    <!--_1mwp _1mwq _4c_p _5bu_ _5yk1-->
+    <!--_1mf _1mj-->
+    <!--2l6du-0-0-->
+
     <arg id="postButton">
         <value>//button[@data-testid='react-composer-post-button')</value>
+    </arg>
+
+    <arg id="dropDownButton">
+        <value>//a[@aria-label='Story options')</value>
+    </arg>
+
+    <!--<arg id="deleteButton">-->
+        <!--<value>/html/body/div[1]/div[2]/div[4]/div/div/div/ul/li[8]/a/span/span</value>-->
+    <!--</arg>-->
+
+    <arg id="deleteButton">
+        <value>//span[. = 'Delete')</value>
+    </arg>
+
+    <arg id="confirmDeletePost">
+        <value>//button[. = 'Delete Post')</value>
+    </arg>
+
+    <arg id="postLocator">
+        <value>//div[@class='_5pbx userContent')</value>
+    </arg>
+
+    <arg id="editProfile">
+        <value>//a[. = 'Edit Profile')</value>
     </arg>
 </fvt_element>
