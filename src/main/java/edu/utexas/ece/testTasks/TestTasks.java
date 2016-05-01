@@ -51,7 +51,18 @@ public class TestTasks {
         assertTrue(utils.waitForText(pattern, WAIT_THRESHOLD));
     }
 
-    public void verifyDisappearance(final String locator) {
-        assertFalse(utils.waitForElement(locator, WAIT_THRESHOLD));
+    public void verifyDisappearance(final String pattern) {
+        assertTrue(utils.waitForDisappearance(pattern, WAIT_THRESHOLD));
+    }
+
+    public void verifyOrder(final String left, final String right) {
+        //left should come before right in the html
+        utils.pause(WAIT_THRESHOLD);
+//        count(a/b[.='tsr']/preceding::a)
+        final String leftXPath = "//*[text() = '" + left + "']/preceding::*";
+        final String righXPath = "//*[text() = '" + right + "']/preceding::*";
+        int leftPosition = selenium.getXpathCount(leftXPath).intValue();
+        int rightPosition = selenium.getXpathCount(righXPath).intValue();
+        assertTrue(leftPosition < rightPosition);
     }
 }

@@ -1,7 +1,7 @@
 package edu.utexas.ece;
 
-import edu.utexas.ece.testCases.TestFacebook;
-import edu.utexas.ece.testCases.TestGoogle;
+import edu.utexas.ece.testCases.TestFacebookMultiplePosts;
+
 import org.testng.TestNG;
 import org.testng.xml.XmlClass;
 import org.testng.xml.XmlSuite;
@@ -40,7 +40,9 @@ public class SeleniumMain {
         XmlTest testFacebook = new XmlTest(suite);
         testFacebook.setName("Test Facebook");
         List<XmlClass> facebookClasses = new ArrayList<XmlClass>();
-        facebookClasses.add(new XmlClass(TestFacebook.class));
+//        facebookClasses.add(new XmlClass(TestFacebook.class));
+//        facebookClasses.add(new XmlClass(TestFacebookSinglePost.class));
+        facebookClasses.add(new XmlClass(TestFacebookMultiplePosts.class));
         testFacebook.setXmlClasses(facebookClasses);
 
         //running tests
