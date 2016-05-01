@@ -12,7 +12,7 @@
         <value>//input[@type='submit')</value>
     </arg>
 
-    <arg id="editProfileLink">
-        <value>//div[a='Edit Profile')</value>
+    <arg id="profileBtn">
+        <value>//a[@title='Profile')</value>
     </arg>
 </fvt_element>
