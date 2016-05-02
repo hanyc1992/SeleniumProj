@@ -60,7 +60,7 @@
         <value>//a[@data-testid='add_mobile'$</value>
     </arg>
 
-    <arg id="phontNumberInput">
+    <arg id="phoneNumberInput">
         <value>//input[@title='Phone number 1'$</value>
     </arg>
 
