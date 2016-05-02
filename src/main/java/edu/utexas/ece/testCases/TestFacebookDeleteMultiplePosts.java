@@ -16,7 +16,7 @@ import java.util.Map;
 /**
  * Created by hanyc on 4/27/2016.
  */
-public class TestFacebookSinglePost {
+public class TestFacebookDeleteMultiplePosts {
     static private String BASE_URL = "http://www.facebook.com";
 
     private TestTasks testTasks;
@@ -31,9 +31,11 @@ public class TestFacebookSinglePost {
         testTasks = new TestTasks(utils);
     }
 
+
+
     @Test
     @Parameters({"facebookParams", "facebookXPath"})
-    public void testFacebookPost(String paramsFileName, final String xPathFileName) {
+    public void testFacebookDeleteMultiplePosts(String paramsFileName, final String xPathFileName) {
         final Map<String, String> paramsMap = XMLParser.getInstance().getMap(paramsFileName);
         final Map<String, String> xPathMap = XMLParser.getInstance().getMap(xPathFileName);
         System.out.println("the paramsMap is " + paramsMap);
@@ -47,17 +49,25 @@ public class TestFacebookSinglePost {
         testTasks.verifyResult(paramsMap.get("verifyStringAfterLogin"));
         testTasks.clickSearchBtn(xPathMap.get("profile"));
         testTasks.verifyResult(paramsMap.get("verifyStringAfterClickProfile"));
-        testTasks.typeSearchTxtField(xPathMap.get("postTextArea"), paramsMap.get("firstPost"));
-        testTasks.clickSearchBtn(xPathMap.get("postButton"));
-        testTasks.verifyResult(paramsMap.get("verifyFirstPostExist"));
-        utils.pause(6000);
+
+
         testTasks.clickSearchBtn(xPathMap.get("dropDownButton"));
         utils.pause(2000);
         testTasks.clickSearchBtn(xPathMap.get("deleteButton1"));
-        utils.pause(3000);
+        utils.pause(2000);
         testTasks.clickSearchBtn(xPathMap.get("confirmDeletePost"));
-        testTasks.verifyDisappearance(paramsMap.get("verifyFirstPostExist"));
-        utils.pause(3000);
+        utils.pause(5000);
+        testTasks.clickSearchBtn(xPathMap.get("profile"));
+        testTasks.verifyResult(paramsMap.get("verifyStringAfterClickProfile"));
+        utils.pause(2000);
+        testTasks.clickSearchBtn(xPathMap.get("dropDownButton"));
+        utils.pause(4000);
+        testTasks.clickSearchBtn(xPathMap.get("deleteButton1"));
+//        testTasks.clickSearchBtn(xPathMap.get("deleteButton2"));
+//        testTasks.clickSearchBtn("/html/body/div[1]/div[2]/div[5]/div/div/div/ul/li[8]/a/span/span");
+        utils.pause(5000);
+        testTasks.clickSearchBtn(xPathMap.get("confirmDeletePost"));
+        utils.pause(5000);
     }
 
 

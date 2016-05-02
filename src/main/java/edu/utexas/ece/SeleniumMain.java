@@ -1,6 +1,9 @@
 package edu.utexas.ece;
 
 import edu.utexas.ece.testCases.TestFacebookMultiplePosts;
+import edu.utexas.ece.testCases.TestFacebookSinglePost;
+import edu.utexas.ece.testCases.TestFacebook;
+import edu.utexas.ece.testCases.TestFacebookDeleteMultiplePosts;
 
 import org.testng.TestNG;
 import org.testng.xml.XmlClass;
@@ -43,6 +46,8 @@ public class SeleniumMain {
 //        facebookClasses.add(new XmlClass(TestFacebook.class));
 //        facebookClasses.add(new XmlClass(TestFacebookSinglePost.class));
         facebookClasses.add(new XmlClass(TestFacebookMultiplePosts.class));
+        facebookClasses.add(new XmlClass(TestFacebookDeleteMultiplePosts.class));
+
         testFacebook.setXmlClasses(facebookClasses);
 
         //running tests

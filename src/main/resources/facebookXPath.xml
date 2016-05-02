@@ -16,28 +16,9 @@
         <value>//a[@title='Profile'$</value>
     </arg>
 
-    <!--<arg id="postTextArea">-->
-    <!--<value>/div/form/div[1$/div[2$/div/textarea</value>-->
-    <!--</arg>-->
-
     <arg id="postTextArea">
         <value>//textarea[@name='xhpc_message_text'$</value>
     </arg>
-    <!--<arg id="postTextArea">-->
-        <!--<value>//div[@title='What's on your mind?'$</value>-->
-    <!--</arg>-->
-
-    <!--<arg id="postTextArea">-->
-        <!--<value>//div[@class='_1mwp _1mwq _4c_p _5bu_ _5yk1'$</value>-->
-    <!--</arg>-->
-
-    <!--<arg id="postTextArea">-->
-        <!--<value>//div[@class='_1mf _1mj'$</value>-->
-    <!--</arg>-->
-
-    <!--<arg id="postTextArea">-->
-        <!--<value>//div[@class='_5rpu'$</value>-->
-    <!--</arg>-->
 
     <arg id="postTextArea2">
         <value>//div[@style='outline: medium none; white-space: pre-wrap; word-wrap: break-word;'$</value>
@@ -51,21 +32,13 @@
         <value>//a[@aria-label='Story options'$[1$</value>
     </arg>
 
-    <!--<arg id="dropDownButton">-->
-        <!--<value>/html/body/div[1$/div[2$/div[1$/div/div[2$/div[2$/div[2$/div/div[2$/div[2$/div[1$/div[1$/div[1$/div[1$/div[1$/div[1$/div[2$/div/div/div[2$/div[1$/div[1$/div/a</value>-->
-    <!--</arg>-->
-
-    <arg id="deleteButton">
-        <value>//span[. = 'Delete'$</value>
-    </arg>
-
     <arg id="deleteButton1">
         <value>//span[text() = 'Delete'$</value>
     </arg>
 
-    <arg id="deleteButton2">
-        <value>//span[text() = 'Delete'$[1$</value>
-    </arg>
+    <!--<arg id="deleteButton2">-->
+        <!--<value>//span[text() = 'Delete'$[1$</value>-->
+    <!--</arg>-->
     <arg id="confirmDeletePost">
         <value>//button[. = 'Delete Post'$</value>
     </arg>
