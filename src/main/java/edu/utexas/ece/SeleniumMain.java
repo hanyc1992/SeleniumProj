@@ -44,9 +44,9 @@ public class SeleniumMain {
         testFacebook.setName("Test Facebook");
         List<XmlClass> facebookClasses = new ArrayList<XmlClass>();
         facebookClasses.add(new XmlClass(TestFacebook.class));
-//        facebookClasses.add(new XmlClass(TestFacebookSinglePost.class));
-//        facebookClasses.add(new XmlClass(TestFacebookMultiplePosts.class));
-//        facebookClasses.add(new XmlClass(TestFacebookDeleteMultiplePosts.class));
+        facebookClasses.add(new XmlClass(TestFacebookSinglePost.class));
+        facebookClasses.add(new XmlClass(TestFacebookMultiplePosts.class));
+        facebookClasses.add(new XmlClass(TestFacebookDeleteMultiplePosts.class));
 
         testFacebook.setXmlClasses(facebookClasses);
 
