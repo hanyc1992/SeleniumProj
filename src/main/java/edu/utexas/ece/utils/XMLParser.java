@@ -77,7 +77,7 @@ public class XMLParser {
         Iterator it = temp.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry)it.next();
-            result.put((String) pair.getKey(), ((String)pair.getValue()).replace(')',']'));
+            result.put((String) pair.getKey(), ((String)pair.getValue()).replace('$',']'));
         }
         return result;
     }

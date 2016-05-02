@@ -19,4 +19,8 @@
     <arg id="verifyStringAfterLogin">
         <value>Find friends</value>
     </arg>
+
+    <arg id="verifyPlace">
+        <value>Austin</value>
+    </arg>
 </fvt_element>

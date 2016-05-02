@@ -1,18 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fvt_element>
     <arg id="loginUserName">
-        <value>//input[@type='email')</value>
+        <value>//input[@type='email'$</value>
     </arg>
 
     <arg id="loginUserPassword">
-        <value>//input[@type='password')</value>
+        <value>//input[@type='password'$</value>
     </arg>
 
     <arg id="loginClkBtn">
-        <value>//input[@type='submit')</value>
+        <value>//input[@type='submit'$</value>
     </arg>
 
     <arg id="profileBtn">
-        <value>//a[@title='Profile')</value>
+        <value>//a[@title='Profile'$</value>
+    </arg>
+
+    <arg id="updateInfoBtn">
+        <value>//a[@role='button' and text()='Update Info'$</value>
+    </arg>
+
+    <arg id="contactBasicBtn">
+        <value>//a[@data-testid='nav_contact_basic'$</value>
+    </arg>
+
+    <arg id="addMobileBtn">
+        <value>//a[@data-testid='add_mobile'$</value>
+    </arg>
+
+    <arg id="phontNumberInput">
+        <value>//input[@title='Phone number 1'$</value>
+    </arg>
+
+    <arg id="saveChangesBtn">
+        <value>//button[text()='Save Changes'$</value>
+    </arg>
+
+    <arg id="placesBtn">
+        <value>//a[@data-testid='nav_places'$</value>
+    </arg>
+
+    <arg id="searchBox">
+        <value>//div[@role='combobox' and @aria-label='Search Facebook'$</value>
+    </arg>
+
+    <arg id="searchBtn">
+        <value>//button[@type='submit'$</value>
+    </arg>
+
+    <arg id="ShushuWangOption">
+        <value>//div[text()='Shushu Wang'$</value>
+    </arg>
+
+    <arg id="aboutBtn">
+        <value>//a[@data-tab-key='about'$</value>
     </arg>
 </fvt_element>
