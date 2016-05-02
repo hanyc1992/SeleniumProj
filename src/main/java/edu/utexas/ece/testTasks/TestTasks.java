@@ -2,8 +2,13 @@ package edu.utexas.ece.testTasks;
 
 import com.thoughtworks.selenium.Selenium;
 import edu.utexas.ece.utils.SeleniumUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.internal.WrapsDriver;
+
+
+import java.util.List;
 
 import static org.testng.AssertJUnit.assertFalse;
 import static org.testng.AssertJUnit.assertTrue;
@@ -41,14 +46,22 @@ public class TestTasks {
         selenium.type(locator, text);
     }
 
-    public void clickSearchBtn(final String locator) {
-        assertTrue(utils.waitForElement(locator, WAIT_THRESHOLD));
+    public void clickBtn(final String locator) {
+        Boolean a = utils.waitForElement(locator, WAIT_THRESHOLD);
+        assertTrue(a);
         selenium.click(locator);
     }
 
     //    Verifies that the specified text pattern appears somewhere on the rendered page shown to the user.
     public void verifyResult(final String pattern) {
-        assertTrue(utils.waitForText(pattern, WAIT_THRESHOLD));
+        final boolean result = utils.waitForText(pattern, WAIT_THRESHOLD);
+        System.out.println("the result is " + result);
+        assertTrue(result);
+    }
+
+    public void verifyNoResult(final String pattern) {
+        final boolean result = utils.waitForElement(pattern, WAIT_THRESHOLD);
+        assertFalse(result);
     }
 
     public void verifyDisappearance(final String pattern) {

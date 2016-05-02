@@ -43,19 +43,19 @@ public class TestFacebookSinglePost {
         testTasks.deleteAllCookies();
         testTasks.typeSearchTxtField(xPathMap.get("loginUserName"), paramsMap.get("wangAyiUserName"));
         testTasks.typeSearchTxtField(xPathMap.get("loginUserPassword"), paramsMap.get("wangAyiPassword"));
-        testTasks.clickSearchBtn(xPathMap.get("loginClkBtn"));
+        testTasks.clickBtn(xPathMap.get("loginClkBtn"));
         testTasks.verifyResult(paramsMap.get("verifyStringAfterLogin"));
-        testTasks.clickSearchBtn(xPathMap.get("profile"));
+        testTasks.clickBtn(xPathMap.get("profile"));
         testTasks.verifyResult(paramsMap.get("verifyStringAfterClickProfile"));
         testTasks.typeSearchTxtField(xPathMap.get("postTextArea"), paramsMap.get("firstPost"));
-        testTasks.clickSearchBtn(xPathMap.get("postButton"));
+        testTasks.clickBtn(xPathMap.get("postButton"));
         testTasks.verifyResult(paramsMap.get("verifyFirstPostExist"));
         utils.pause(6000);
-        testTasks.clickSearchBtn(xPathMap.get("dropDownButton"));
+        testTasks.clickBtn(xPathMap.get("dropDownButton"));
         utils.pause(2000);
-        testTasks.clickSearchBtn(xPathMap.get("deleteButton1"));
+        testTasks.clickBtn(xPathMap.get("deleteButton1"));
         utils.pause(3000);
-        testTasks.clickSearchBtn(xPathMap.get("confirmDeletePost"));
+        testTasks.clickBtn(xPathMap.get("confirmDeletePost"));
         testTasks.verifyDisappearance(paramsMap.get("verifyFirstPostExist"));
         utils.pause(3000);
     }

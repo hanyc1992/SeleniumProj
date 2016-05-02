@@ -45,17 +45,17 @@ public class TestFacebookMultiplePosts {
         testTasks.deleteAllCookies();
         testTasks.typeSearchTxtField(xPathMap.get("loginUserName"), paramsMap.get("wangAyiUserName"));
         testTasks.typeSearchTxtField(xPathMap.get("loginUserPassword"), paramsMap.get("wangAyiPassword"));
-        testTasks.clickSearchBtn(xPathMap.get("loginClkBtn"));
+        testTasks.clickBtn(xPathMap.get("loginClkBtn"));
         testTasks.verifyResult(paramsMap.get("verifyStringAfterLogin"));
-        testTasks.clickSearchBtn(xPathMap.get("profile"));
+        testTasks.clickBtn(xPathMap.get("profile"));
         testTasks.verifyResult(paramsMap.get("verifyStringAfterClickProfile"));
 
         testTasks.typeSearchTxtField(xPathMap.get("postTextArea"), paramsMap.get("firstPost"));
-        testTasks.clickSearchBtn(xPathMap.get("postButton"));
+        testTasks.clickBtn(xPathMap.get("postButton"));
 //        testTasks.verifyResult(paramsMap.get("verifyFirstPostExist"));
         utils.pause(3000);
         testTasks.typeSearchTxtField(xPathMap.get("postTextArea2"), paramsMap.get("secondPost"));
-        testTasks.clickSearchBtn(xPathMap.get("postButton"));
+        testTasks.clickBtn(xPathMap.get("postButton"));
         utils.pause(3000);
         testTasks.verifyOrder(paramsMap.get("secondPost"), paramsMap.get("firstPost"));
         utils.pause(3000);

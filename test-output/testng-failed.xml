@@ -7,19 +7,14 @@
   <parameter name="googleXPath" value="/googleXPath.xml"/>
   <test name="Test Facebook(failed)">
     <classes>
-      <class name="edu.utexas.ece.testCases.TestFacebookDeleteMultiplePosts">
+      <class name="edu.utexas.ece.testCases.TestFacebook">
         <methods>
-          <include name="testFacebookDeleteMultiplePosts" invocation-numbers="0"/>
-          <include name="init"/>
-          <include name="destory"/>
-        </methods>
-      </class> <!-- edu.utexas.ece.testCases.TestFacebookDeleteMultiplePosts -->
-      <class name="edu.utexas.ece.testCases.TestFacebookMultiplePosts">
-        <methods>
+          <include name="testFacebookProfileChange" invocation-numbers="0"/>
           <include name="destory"/>
           <include name="init"/>
+          <include name="testFacebookVisibilitySetting" invocation-numbers="0"/>
         </methods>
-      </class> <!-- edu.utexas.ece.testCases.TestFacebookMultiplePosts -->
+      </class> <!-- edu.utexas.ece.testCases.TestFacebook -->
     </classes>
   </test> <!-- Test Facebook(failed) -->
 </suite> <!-- Failed suite [Selenium Project] -->

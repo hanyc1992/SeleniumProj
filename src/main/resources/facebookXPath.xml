@@ -44,4 +44,8 @@
     </arg>
 
 
+    <arg id="profileBtn">
+        <value>//a[@title='Profile'$</value>
+    </arg>
+
 </fvt_element>

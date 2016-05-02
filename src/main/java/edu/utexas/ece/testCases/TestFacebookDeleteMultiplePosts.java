@@ -45,28 +45,28 @@ public class TestFacebookDeleteMultiplePosts {
         testTasks.deleteAllCookies();
         testTasks.typeSearchTxtField(xPathMap.get("loginUserName"), paramsMap.get("wangAyiUserName"));
         testTasks.typeSearchTxtField(xPathMap.get("loginUserPassword"), paramsMap.get("wangAyiPassword"));
-        testTasks.clickSearchBtn(xPathMap.get("loginClkBtn"));
+        testTasks.clickBtn(xPathMap.get("loginClkBtn"));
         testTasks.verifyResult(paramsMap.get("verifyStringAfterLogin"));
-        testTasks.clickSearchBtn(xPathMap.get("profile"));
+        testTasks.clickBtn(xPathMap.get("profile"));
         testTasks.verifyResult(paramsMap.get("verifyStringAfterClickProfile"));
 
 
-        testTasks.clickSearchBtn(xPathMap.get("dropDownButton"));
+        testTasks.clickBtn(xPathMap.get("dropDownButton"));
         utils.pause(2000);
-        testTasks.clickSearchBtn(xPathMap.get("deleteButton1"));
+        testTasks.clickBtn(xPathMap.get("deleteButton1"));
         utils.pause(2000);
-        testTasks.clickSearchBtn(xPathMap.get("confirmDeletePost"));
+        testTasks.clickBtn(xPathMap.get("confirmDeletePost"));
         utils.pause(5000);
-        testTasks.clickSearchBtn(xPathMap.get("profile"));
+        testTasks.clickBtn(xPathMap.get("profile"));
         testTasks.verifyResult(paramsMap.get("verifyStringAfterClickProfile"));
         utils.pause(2000);
-        testTasks.clickSearchBtn(xPathMap.get("dropDownButton"));
+        testTasks.clickBtn(xPathMap.get("dropDownButton"));
         utils.pause(4000);
-        testTasks.clickSearchBtn(xPathMap.get("deleteButton1"));
-//        testTasks.clickSearchBtn(xPathMap.get("deleteButton2"));
-//        testTasks.clickSearchBtn("/html/body/div[1]/div[2]/div[5]/div/div/div/ul/li[8]/a/span/span");
+        testTasks.clickBtn(xPathMap.get("deleteButton1"));
+//        testTasks.clickBtn(xPathMap.get("deleteButton2"));
+//        testTasks.clickBtn("/html/body/div[1]/div[2]/div[5]/div/div/div/ul/li[8]/a/span/span");
         utils.pause(5000);
-        testTasks.clickSearchBtn(xPathMap.get("confirmDeletePost"));
+        testTasks.clickBtn(xPathMap.get("confirmDeletePost"));
         utils.pause(5000);
     }
 
