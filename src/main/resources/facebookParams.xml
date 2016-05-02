@@ -23,4 +23,28 @@
     <arg id="verifyPlace">
         <value>Austin</value>
     </arg>
+
+    <arg id="wangAyiUserName">
+        <value>5128970773</value>
+    </arg>
+
+    <arg id="wangAyiPassword">
+        <value>@zju.edu.cn</value>
+    </arg>
+
+    <arg id="verifyStringAfterClickProfile">
+        <value>Update Info</value>
+    </arg>
+
+    <arg id="verifyFirstPostExist">
+        <value>This is my first post.</value>
+    </arg>
+
+    <arg id="firstPost">
+        <value>This is my first post.</value>
+    </arg>
+
+    <arg id="secondPost">
+        <value>This is my second post.</value>
+    </arg>
 </fvt_element>

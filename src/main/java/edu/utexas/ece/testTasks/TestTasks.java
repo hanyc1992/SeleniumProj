@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.internal.WrapsDriver;
 
+
 import java.util.List;
 
 import static org.testng.AssertJUnit.assertFalse;
@@ -61,5 +62,20 @@ public class TestTasks {
     public void verifyNoResult(final String pattern) {
         final boolean result = utils.waitForElement(pattern, WAIT_THRESHOLD);
         assertFalse(result);
+    }
+
+    public void verifyDisappearance(final String pattern) {
+        assertTrue(utils.waitForDisappearance(pattern, WAIT_THRESHOLD));
+    }
+
+    public void verifyOrder(final String left, final String right) {
+        //left should come before right in the html
+        utils.pause(WAIT_THRESHOLD);
+//        count(a/b[.='tsr']/preceding::a)
+        final String leftXPath = "//*[text() = '" + left + "']/preceding::*";
+        final String righXPath = "//*[text() = '" + right + "']/preceding::*";
+        int leftPosition = selenium.getXpathCount(leftXPath).intValue();
+        int rightPosition = selenium.getXpathCount(righXPath).intValue();
+        assertTrue(leftPosition < rightPosition);
     }
 }

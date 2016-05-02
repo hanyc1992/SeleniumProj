@@ -12,6 +12,38 @@
         <value>//input[@type='submit'$</value>
     </arg>
 
+    <arg id="profile">
+        <value>//a[@title='Profile'$</value>
+    </arg>
+
+    <arg id="postTextArea">
+        <value>//textarea[@name='xhpc_message_text'$</value>
+    </arg>
+
+    <arg id="postTextArea2">
+        <value>//div[@style='outline: medium none; white-space: pre-wrap; word-wrap: break-word;'$</value>
+    </arg>
+
+    <arg id="postButton">
+        <value>//button[@data-testid='react-composer-post-button'$</value>
+    </arg>
+
+    <arg id="dropDownButton">
+        <value>//a[@aria-label='Story options'$[1$</value>
+    </arg>
+
+    <arg id="deleteButton1">
+        <value>//span[text() = 'Delete'$</value>
+    </arg>
+
+    <!--<arg id="deleteButton2">-->
+        <!--<value>//span[text() = 'Delete'$[1$</value>-->
+    <!--</arg>-->
+    <arg id="confirmDeletePost">
+        <value>//button[. = 'Delete Post'$</value>
+    </arg>
+
+
     <arg id="profileBtn">
         <value>//a[@title='Profile'$</value>
     </arg>
@@ -55,4 +87,5 @@
     <arg id="aboutBtn">
         <value>//a[@data-tab-key='about'$</value>
     </arg>
+
 </fvt_element>

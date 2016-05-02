@@ -104,8 +104,6 @@ public class TestFacebook {
         testTasks.verifyNoResult(paramsMap.get("verifyPlace"));
     }
 
-
-
     @AfterClass
     public void destory() {
         if(webDriver != null){

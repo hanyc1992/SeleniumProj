@@ -1,7 +1,10 @@
 package edu.utexas.ece;
 
+import edu.utexas.ece.testCases.TestFacebookMultiplePosts;
+import edu.utexas.ece.testCases.TestFacebookSinglePost;
 import edu.utexas.ece.testCases.TestFacebook;
-import edu.utexas.ece.testCases.TestGoogle;
+import edu.utexas.ece.testCases.TestFacebookDeleteMultiplePosts;
+
 import org.testng.TestNG;
 import org.testng.xml.XmlClass;
 import org.testng.xml.XmlSuite;
@@ -29,7 +32,7 @@ public class SeleniumMain {
 
         suite.setParameters(suiteParamsMap);
 
-//        //Test Google Search
+        //Test Google Search
 //        XmlTest testGoogle = new XmlTest(suite);
 //        testGoogle.setName("Test Google");
 //        List<XmlClass> googleClasses = new ArrayList<XmlClass>();
@@ -41,6 +44,10 @@ public class SeleniumMain {
         testFacebook.setName("Test Facebook");
         List<XmlClass> facebookClasses = new ArrayList<XmlClass>();
         facebookClasses.add(new XmlClass(TestFacebook.class));
+        facebookClasses.add(new XmlClass(TestFacebookSinglePost.class));
+        facebookClasses.add(new XmlClass(TestFacebookMultiplePosts.class));
+        facebookClasses.add(new XmlClass(TestFacebookDeleteMultiplePosts.class));
+
         testFacebook.setXmlClasses(facebookClasses);
 
         //running tests

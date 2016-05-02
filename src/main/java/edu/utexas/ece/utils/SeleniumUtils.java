@@ -78,4 +78,18 @@ public class SeleniumUtils extends SeleneseTestCase {
         }
         return textExist;
     }
+
+    public boolean waitForDisappearance(String tmplName, int millisecs) {
+        boolean textDisappear = false;
+        int time = 0;
+        while (time < millisecs) {
+            if (!selenium.isTextPresent(tmplName)) {
+                textDisappear = true;
+                break;
+            }
+            time += 100;
+            pause(100);
+        }
+        return textDisappear;
+    }
 }
