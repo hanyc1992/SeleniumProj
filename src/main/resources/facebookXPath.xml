@@ -48,4 +48,44 @@
         <value>//a[@title='Profile'$</value>
     </arg>
 
+    <arg id="updateInfoBtn">
+        <value>//a[@role='button' and text()='Update Info'$</value>
+    </arg>
+
+    <arg id="contactBasicBtn">
+        <value>//a[@data-testid='nav_contact_basic'$</value>
+    </arg>
+
+    <arg id="addMobileBtn">
+        <value>//a[@data-testid='add_mobile'$</value>
+    </arg>
+
+    <arg id="phontNumberInput">
+        <value>//input[@title='Phone number 1'$</value>
+    </arg>
+
+    <arg id="saveChangesBtn">
+        <value>//button[text()='Save Changes'$</value>
+    </arg>
+
+    <arg id="placesBtn">
+        <value>//a[@data-testid='nav_places'$</value>
+    </arg>
+
+    <arg id="searchBox">
+        <value>//div[@role='combobox' and @aria-label='Search Facebook'$</value>
+    </arg>
+
+    <arg id="searchBtn">
+        <value>//button[@type='submit'$</value>
+    </arg>
+
+    <arg id="ShushuWangOption">
+        <value>//div[text()='Shushu Wang'$</value>
+    </arg>
+
+    <arg id="aboutBtn">
+        <value>//a[@data-tab-key='about'$</value>
+    </arg>
+
 </fvt_element>

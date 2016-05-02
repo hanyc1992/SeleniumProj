@@ -20,6 +20,10 @@
         <value>Find friends</value>
     </arg>
 
+    <arg id="verifyPlace">
+        <value>Austin</value>
+    </arg>
+
     <arg id="wangAyiUserName">
         <value>5128970773</value>
     </arg>

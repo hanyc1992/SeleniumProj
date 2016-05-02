@@ -9,7 +9,6 @@
     <classes>
       <class name="edu.utexas.ece.testCases.TestFacebook">
         <methods>
-          <include name="testFacebookProfileChange" invocation-numbers="0"/>
           <include name="destory"/>
           <include name="init"/>
           <include name="testFacebookVisibilitySetting" invocation-numbers="0"/>

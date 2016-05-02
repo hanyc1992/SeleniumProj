@@ -33,28 +33,6 @@ public class TestFacebook {
 
     @Test
     @Parameters({"facebookParams", "facebookXPath"})
-    public void testFacebookProfileChange(String paramsFileName, final String xPathFileName) {
-        final Map<String, String> paramsMap = XMLParser.getInstance().getMap(paramsFileName);
-        final Map<String, String> xPathMap = XMLParser.getInstance().getMap(xPathFileName);
-        System.out.println("the paramsMap is " + paramsMap);
-        System.out.println("the xPathMap is " + xPathMap);
-
-        testTasks.openSite();
-        testTasks.deleteAllCookies();
-        testTasks.typeSearchTxtField(xPathMap.get("loginUserName"), paramsMap.get("userNameA"));
-        testTasks.typeSearchTxtField(xPathMap.get("loginUserPassword"), paramsMap.get("passwordA"));
-        testTasks.clickBtn(xPathMap.get("loginClkBtn"));
-        testTasks.clickBtn(xPathMap.get("profileBtn"));
-        testTasks.clickBtn("//a[@role='button' and text()='Update Info']");
-        testTasks.clickBtn("//a[@data-testid='nav_contact_basic']");
-        testTasks.clickBtn("//a[@data-testid='add_mobile']");
-        testTasks.typeSearchTxtField("//input[@title='Phone number 1']", paramsMap.get("userNameA"));
-        testTasks.clickBtn("//button[text()='Save Changes']");
-        testTasks.verifyResult(paramsMap.get("userNameA"));
-    }
-
-    @Test
-    @Parameters({"facebookParams", "facebookXPath"})
     public void testFacebookLogin(String paramsFileName, final String xPathFileName) {
         final Map<String, String> paramsMap = XMLParser.getInstance().getMap(paramsFileName);
         final Map<String, String> xPathMap = XMLParser.getInstance().getMap(xPathFileName);
@@ -72,6 +50,28 @@ public class TestFacebook {
 
     @Test
     @Parameters({"facebookParams", "facebookXPath"})
+    public void testFacebookProfileChange(String paramsFileName, final String xPathFileName) {
+        final Map<String, String> paramsMap = XMLParser.getInstance().getMap(paramsFileName);
+        final Map<String, String> xPathMap = XMLParser.getInstance().getMap(xPathFileName);
+        System.out.println("the paramsMap is " + paramsMap);
+        System.out.println("the xPathMap is " + xPathMap);
+
+        testTasks.openSite();
+        testTasks.deleteAllCookies();
+        testTasks.typeSearchTxtField(xPathMap.get("loginUserName"), paramsMap.get("userNameA"));
+        testTasks.typeSearchTxtField(xPathMap.get("loginUserPassword"), paramsMap.get("passwordA"));
+        testTasks.clickBtn(xPathMap.get("loginClkBtn"));
+        testTasks.clickBtn(xPathMap.get("profileBtn"));
+        testTasks.clickBtn(xPathMap.get("updateInfoBtn"));
+        testTasks.clickBtn(xPathMap.get("contactBasicBtn"));
+        testTasks.clickBtn(xPathMap.get("addMobileBtn"));
+        testTasks.typeSearchTxtField(xPathMap.get("phoneNumberInput"), paramsMap.get("userNameA"));
+        testTasks.clickBtn(xPathMap.get("saveChangesBtn"));
+        testTasks.verifyResult(paramsMap.get("userNameA"));
+    }
+
+    @Test
+    @Parameters({"facebookParams", "facebookXPath"})
     public void testFacebookVisibilitySetting(String paramsFileName, final String xPathFileName) {
         final Map<String, String> paramsMap = XMLParser.getInstance().getMap(paramsFileName);
         final Map<String, String> xPathMap = XMLParser.getInstance().getMap(xPathFileName);
@@ -85,9 +85,9 @@ public class TestFacebook {
         testTasks.typeSearchTxtField(xPathMap.get("loginUserPassword"), paramsMap.get("passwordB"));
         testTasks.clickBtn(xPathMap.get("loginClkBtn"));
         testTasks.clickBtn(xPathMap.get("profileBtn"));
-        testTasks.clickBtn("//a[@role='button' and text()='Update Info']");
-        testTasks.clickBtn("//a[@data-testid='nav_places']");
-        testTasks.verifyResult("Austin");
+        testTasks.clickBtn(xPathMap.get("updateInfoBtn"));
+        testTasks.clickBtn(xPathMap.get("placesBtn"));
+        testTasks.verifyResult(paramsMap.get("verifyPlace"));
 
         /* Check Visibility in account A */
         testTasks.openSite();
@@ -95,15 +95,13 @@ public class TestFacebook {
         testTasks.typeSearchTxtField(xPathMap.get("loginUserName"), paramsMap.get("userNameA"));
         testTasks.typeSearchTxtField(xPathMap.get("loginUserPassword"), paramsMap.get("passwordA"));
         testTasks.clickBtn(xPathMap.get("loginClkBtn"));
-        testTasks.typeSearchTxtField("//div[@role='combobox' and @aria-label='Search Facebook']", "Shushu Wang");
-        testTasks.clickBtn("//button[@type='submit']");
-        testTasks.verifyResult("Shushu Wang");
-        testTasks.clickBtn("//div[text()='Shushu Wang']");
-        testTasks.clickBtn("//a[@data-tab-key='about']");
-        testTasks.clickBtn("//a[@data-testid='nav_contact_basic']");
-        testTasks.verifyResult("1992");
-        testTasks.verifyResult("Male");
-        testTasks.verifyNoResult("Birth Date");
+        testTasks.typeSearchTxtField(xPathMap.get("searchBox"), paramsMap.get("userNameB"));
+        testTasks.clickBtn(xPathMap.get("searchBtn"));
+        testTasks.verifyResult(paramsMap.get("userNameB"));
+        testTasks.clickBtn(xPathMap.get("ShushuWangOption"));
+        testTasks.clickBtn(xPathMap.get("aboutBtn"));
+        testTasks.clickBtn(xPathMap.get("contactBasicBtn"));
+        testTasks.verifyNoResult(paramsMap.get("verifyPlace"));
     }
 
     @AfterClass
