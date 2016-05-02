@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Selenium Project" duration-ms="13854" started-at="2016-05-01T21:17:39Z" finished-at="2016-05-01T21:17:53Z">
+  <suite name="Selenium Project" duration-ms="20338" started-at="2016-05-02T00:50:43Z" finished-at="2016-05-02T00:51:03Z">
     <groups>
     </groups>
-    <test name="Test Facebook" duration-ms="13854" started-at="2016-05-01T21:17:39Z" finished-at="2016-05-01T21:17:53Z">
+    <test name="Test Facebook" duration-ms="20338" started-at="2016-05-02T00:50:43Z" finished-at="2016-05-02T00:51:03Z">
       <class name="edu.utexas.ece.testCases.TestFacebook">
-        <test-method status="PASS" signature="init()[pri:0, instance:edu.utexas.ece.testCases.TestFacebook@6aceb1a5]" name="init" is-config="true" duration-ms="2358" started-at="2016-05-01T16:17:39Z" finished-at="2016-05-01T16:17:42Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:edu.utexas.ece.testCases.TestFacebook@6aceb1a5]" name="init" is-config="true" duration-ms="2311" started-at="2016-05-01T19:50:43Z" finished-at="2016-05-01T19:50:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="FAIL" signature="testFacebookVisibilitySetting(java.lang.String, java.lang.String)[pri:0, instance:edu.utexas.ece.testCases.TestFacebook@6aceb1a5]" name="testFacebookVisibilitySetting" duration-ms="11330" started-at="2016-05-01T16:17:42Z" finished-at="2016-05-01T16:17:53Z">
+        <test-method status="PASS" signature="testFacebookLogin(java.lang.String, java.lang.String)[pri:0, instance:edu.utexas.ece.testCases.TestFacebook@6aceb1a5]" name="testFacebookLogin" duration-ms="5091" started-at="2016-05-01T19:50:45Z" finished-at="2016-05-01T19:50:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[/facebookParams.xml]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[/facebookXPath.xml]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFacebookLogin -->
+        <test-method status="FAIL" signature="testFacebookVisibilitySetting(java.lang.String, java.lang.String)[pri:0, instance:edu.utexas.ece.testCases.TestFacebook@6aceb1a5]" name="testFacebookVisibilitySetting" duration-ms="12780" started-at="2016-05-01T19:50:50Z" finished-at="2016-05-01T19:51:03Z">
           <params>
             <param index="0">
               <value>
@@ -31,7 +47,7 @@
 	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:24)
 	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:33)
 	at edu.utexas.ece.testTasks.TestTasks.clickBtn(TestTasks.java:50)
-	at edu.utexas.ece.testCases.TestFacebook.testFacebookVisibilitySetting(TestFacebook.java:67)
+	at edu.utexas.ece.testCases.TestFacebook.testFacebookVisibilitySetting(TestFacebook.java:90)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -65,7 +81,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFacebookVisibilitySetting -->
-        <test-method status="PASS" signature="destory()[pri:0, instance:edu.utexas.ece.testCases.TestFacebook@6aceb1a5]" name="destory" is-config="true" duration-ms="158" started-at="2016-05-01T16:17:53Z" finished-at="2016-05-01T16:17:53Z">
+        <test-method status="PASS" signature="destory()[pri:0, instance:edu.utexas.ece.testCases.TestFacebook@6aceb1a5]" name="destory" is-config="true" duration-ms="147" started-at="2016-05-01T19:51:03Z" finished-at="2016-05-01T19:51:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- destory -->
