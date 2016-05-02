@@ -2,3 +2,6 @@
 **/.idea/tasks.xml
 /target/*
 /test-output/*
+*.class
+
+*.class
