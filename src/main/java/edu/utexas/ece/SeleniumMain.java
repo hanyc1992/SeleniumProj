@@ -29,12 +29,12 @@ public class SeleniumMain {
 
         suite.setParameters(suiteParamsMap);
 
-        //Test Google Search
-        XmlTest testGoogle = new XmlTest(suite);
-        testGoogle.setName("Test Google");
-        List<XmlClass> googleClasses = new ArrayList<XmlClass>();
-        googleClasses.add(new XmlClass(TestGoogle.class));
-        testGoogle.setXmlClasses(googleClasses);
+//        //Test Google Search
+//        XmlTest testGoogle = new XmlTest(suite);
+//        testGoogle.setName("Test Google");
+//        List<XmlClass> googleClasses = new ArrayList<XmlClass>();
+//        googleClasses.add(new XmlClass(TestGoogle.class));
+//        testGoogle.setXmlClasses(googleClasses);
 
 //        Test Facebook
         XmlTest testFacebook = new XmlTest(suite);
